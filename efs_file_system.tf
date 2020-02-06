@@ -7,7 +7,7 @@ resource "aws_efs_file_system" "efs_file_system" {
   tags = merge(
     local.required_tags,
     map(
-      "Name", "efs-${var.project-abbr}-${var.function-abbr}-${var.organizational_unit-abbr}-${local.region-abbr}"
+      "Name", "efs-${var.project-abbr}-${var.function-abbr}-${var.organizational_unit-abbr}-${var.environment}-${local.region-abbr}"
     )
   )
 }

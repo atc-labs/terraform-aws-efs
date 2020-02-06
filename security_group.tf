@@ -6,7 +6,7 @@ resource "aws_security_group" "security_group" {
   tags = merge(
     local.required_tags,
     map(
-      "Name", "efs-${var.project-abbr}-${var.function-abbr}-${var.organizational_unit-abbr}-${local.region-abbr}"
+      "Name", "efs-${var.project-abbr}-${var.function-abbr}-${var.organizational_unit-abbr}-${var.environment}-${local.region-abbr}"
     )
   )
 }
